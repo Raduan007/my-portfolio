@@ -38,7 +38,7 @@ const TechStack = () => {
             <div key={index} className="flex flex-col items-center group">
               <div
                 className="
-                  w-24 h-24
+                  w-16 h-16
                   rounded-full
                   border border-white/10
                   bg-white/5
