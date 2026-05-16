@@ -1,12 +1,21 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { Moon, Sun } from "lucide-react";
+import React, { useState } from "react";
+import { Home, Code, GraduationCap, Folder, Mail, MoreHorizontal, Moon, Sun } from "lucide-react";
+
+const navItems = [
+  { name: "Home", icon: Home, link: "#" },
+  { name: "Tech Stack", icon: Code, link: "#TackStack" },
+  { name: "Qualification", icon: GraduationCap, link: "#Qualification" },
+  { name: "Projects", icon: Folder, link: "#projects" },
+  { name: "Contact Me", icon: Mail, link: "#contact" },
+];
 
 const Navbar = () => {
+  const [active, setActive] = useState("Home");
   const [darkMode, setDarkMode] = useState(true);
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
     } else {
@@ -15,100 +24,83 @@ const Navbar = () => {
   }, [darkMode]);
 
   return (
-    <nav
-      className="
-      fixed
-      top-0
-      left-0
-      w-full
-      z-50
-      backdrop-blur-md
-      bg-white/70
-      dark:bg-[#050816]/80
-      border-b
-      border-black/10
-      dark:border-white/10
-      transition-all
-      duration-300
-    "
-    >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div className="fixed top-5 left-0 w-full flex justify-center z-50">
+      <div
+        className="
+        flex items-center justify-between
+        w-[92%] md:w-[80%] lg:w-[70%]
+        px-4 py-3
 
-        {/* LEFT */}
-        <div className="flex items-center gap-3">
+        rounded-full
+        backdrop-blur-xl
 
-          <div className="w-10 h-10 rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-500 flex items-center justify-center font-bold text-white">
-            R
+        bg-white/10
+        dark:bg-[#0B1120]/60
+
+        border border-white/10
+        shadow-lg
+      "
+      >
+        {/* LEFT LOGO */}
+        <div className="flex items-center gap-2">
+          <div className="w-11 h-11 rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-500 flex items-center justify-center text-white font-bold shadow-md">
+          RA
           </div>
-
-          <h1 className="text-2xl font-bold text-black dark:text-white">
-            Raduan
-            <span className="text-violet-500">.</span>
-          </h1>
         </div>
 
-        {/* CENTER */}
-        <div className="hidden md:flex items-center gap-8 font-medium">
+        {/* CENTER NAV */}
+        <div className="hidden md:flex items-center gap-2">
+          {navItems.map((item, i) => {
+            const Icon = item.icon;
+            const isActive = active === item.name;
 
-          <a
-            href="#"
-            className="text-black dark:text-white hover:text-violet-500 transition"
-          >
-            Home
-          </a>
+            return (
+              <a
+                key={i}
+                href={item.link}
+                onClick={() => setActive(item.name)}
+                className={`
+                  flex items-center gap-2
+                  px-4 py-2 rounded-full
+                  text-sm font-medium
+                  transition
 
-          <a
-            href="#about"
-            className="text-black dark:text-white hover:text-violet-500 transition"
-          >
-            About
-          </a>
+                  ${
+                    isActive
+                      ? "bg-white/20 dark:bg-white/10 text-violet-400"
+                      : "text-white/70 hover:text-white hover:bg-white/10"
+                  }
+                `}
+              >
+                <Icon size={16} />
+                {item.name}
+              </a>
+            );
+          })}
 
-          <a
-            href="#skills"
-            className="text-black dark:text-white hover:text-violet-500 transition"
-          >
-            Skills
-          </a>
-
-          <a
-            href="#projects"
-            className="text-black dark:text-white hover:text-violet-500 transition"
-          >
-            Projects
-          </a>
-
-          <a
-            href="#contact"
-            className="text-black dark:text-white hover:text-violet-500 transition"
-          >
-            Contact
-          </a>
+          {/* MORE BUTTON */}
+          <button className="p-2 rounded-full hover:bg-white/10 transition">
+            <MoreHorizontal size={18} />
+          </button>
         </div>
 
-        {/* RIGHT */}
+        {/* RIGHT DARK MODE */}
         <button
           onClick={() => setDarkMode(!darkMode)}
           className="
-          w-11
-          h-11
-          rounded-full
-          border
-          border-black/10
-          dark:border-white/20
-          flex
-          items-center
-          justify-center
-          hover:border-violet-500
-          transition
-          text-black
-          dark:text-white
-        "
+            w-10 h-10
+            rounded-full
+            flex items-center justify-center
+            border border-white/10
+            hover:border-violet-500
+            transition
+            text-white
+          "
         >
-          {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+          {darkMode ? <Sun size={18} /> : <Moon size={18} />}
         </button>
       </div>
-    </nav>
+    </div>
   );
 };
 
