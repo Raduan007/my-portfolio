@@ -5,12 +5,11 @@ import { Home, Code, GraduationCap, Folder, Mail, MoreHorizontal, Moon, Sun } fr
 
 const navItems = [
   { name: "Home", icon: Home, link: "#" },
-  { name: "Tech Stack", icon: Code, link: "#TackStack" },
-  { name: "Qualification", icon: GraduationCap, link: "#Qualification" },
+  { name: "Tech Stack", icon: Code, link: "#tech-stack" },
+  { name: "Qualification", icon: GraduationCap, link: "#qualification" },
   { name: "Projects", icon: Folder, link: "#projects" },
   { name: "Contact Me", icon: Mail, link: "#contact" },
 ];
-
 const Navbar = () => {
   const [active, setActive] = useState("Home");
   const [darkMode, setDarkMode] = useState(true);

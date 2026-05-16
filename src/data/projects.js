@@ -1,29 +1,23 @@
 export const projects = [
   {
-    title: "Portfolio Website",
-    description:
-      "Modern personal portfolio website using Next.js and Tailwind CSS.",
-    image:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-    github: "https://github.com/yourusername/project1",
-    live: "https://yourproject.com",
+    title: "Qurbanihat",
+    description: "Modern personal portfolio website using Next.js and Tailwind CSS.",
+    image: "/assets/project1.png",
+    github: "https://github.com/Raduan007/B13-A8-QurbaniHat",
+    live: "https://b13-a8-qurbani-hat.vercel.app/",
   },
   {
-    title: "E-Commerce Website",
-    description:
-      "Responsive online shopping website with cart functionality.",
-    image:
-      "https://images.unsplash.com/photo-1556740749-887f6717d7e4",
-    github: "https://github.com/yourusername/project2",
-    live: "https://yourproject.com",
+    title: "Keen Keeper",
+    description: "Responsive online shopping website with cart functionality.",
+    image: "/assets/project2.png",
+    github: "https://github.com/Raduan007/B13-A7-keen-Keeper",
+    live: "https://b13-a7-keen-keeper-z3zy.vercel.app/",
   },
   {
-    title: "Task Manager App",
-    description:
-      "Full stack task management application with authentication.",
-    image:
-      "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b",
-    github: "https://github.com/yourusername/project3",
-    live: "https://yourproject.com",
+    title: "Digitools-platfrom",
+    description: "Full stack task management application with authentication.",
+    image: "/assets/project3.png",
+    github: "https://github.com/Raduan007/B13-A6",
+    live: "https://jovial-hamster-ba4fe3.netlify.app/",
   },
 ];
