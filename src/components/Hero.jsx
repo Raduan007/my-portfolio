@@ -80,10 +80,12 @@ const Hero = () => {
             </a>
 
             <a
-              href="#contact"
+             href="/assets/raduan.pdf" download
               className="px-7 py-3 rounded-full border border-black/10 dark:border-white/20 hover:border-violet-500 transition"
             >
-              Contact Me
+            
+           Download Resume
+
             </a>
           </div>
 
