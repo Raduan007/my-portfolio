@@ -18,10 +18,7 @@ const backendSkills = [
 
 const Skills = () => {
   return (
-    <section
-      id="skills"
-      className="relative py-24 overflow-hidden bg-[#020617] text-white"
-    >
+    <section className="bg-white dark:bg-[#0B1120] text-gray-900 dark:text-white transition-colors duration-300">
       {/* Blur */}
       <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-purple-700/20 blur-[120px]" />
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-blue-700/20 blur-[120px]" />

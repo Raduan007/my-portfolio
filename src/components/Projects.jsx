@@ -3,9 +3,12 @@ import { projects } from "@/data/projects";
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-24 px-6">
+    <section
+      id="projects"
+      className="py-24 px-6 bg-white dark:bg-[#0B1120] transition-colors duration-300"
+    >
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-14">
+        <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-14">
           Projects
         </h2>
 
@@ -13,7 +16,18 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-violet-500 transition"
+              className="
+                bg-gray-100 dark:bg-[#111827]
+                border border-gray-200 dark:border-gray-700
+                rounded-3xl
+                overflow-hidden
+                shadow-lg
+                hover:shadow-xl
+                hover:-translate-y-2
+                hover:border-violet-500
+                transition-all
+                duration-300
+              "
             >
               <img
                 src={project.image}
@@ -22,19 +36,30 @@ const Projects = () => {
               />
 
               <div className="p-6 space-y-4">
-                <h3 className="text-2xl font-semibold">
+                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
                   {project.title}
                 </h3>
 
-                <p className="text-gray-300 text-sm leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                   {project.description}
                 </p>
 
-                <div className="flex gap-4">
+                <div className="flex gap-4 pt-2">
                   <a
                     href={project.github}
                     target="_blank"
-                    className="px-4 py-2 rounded-full border border-white/20 hover:border-violet-500 transition"
+                    rel="noopener noreferrer"
+                    className="
+                      px-4 py-2
+                      rounded-full
+                      border
+                      border-gray-300 dark:border-gray-600
+                      text-gray-700 dark:text-gray-200
+                      hover:bg-violet-600
+                      hover:text-white
+                      hover:border-violet-600
+                      transition-all
+                    "
                   >
                     GitHub
                   </a>
@@ -42,7 +67,15 @@ const Projects = () => {
                   <a
                     href={project.live}
                     target="_blank"
-                    className="px-4 py-2 rounded-full bg-violet-600 hover:bg-violet-700 transition"
+                    rel="noopener noreferrer"
+                    className="
+                      px-4 py-2
+                      rounded-full
+                      bg-violet-600
+                      text-white
+                      hover:bg-violet-700
+                      transition-all
+                    "
                   >
                     Live Demo
                   </a>

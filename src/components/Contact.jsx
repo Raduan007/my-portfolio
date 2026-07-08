@@ -12,10 +12,10 @@ export default function Contact() {
 
     emailjs
       .sendForm(
-        "service_4qk1nvf",        // ✅ Service ID
-        "template_ldkmyuf",       // ✅ Template ID
+        "service_4qk1nvf",
+        "template_ldkmyuf",
         e.target,
-        "PvhhmUajvzvo4kIVP"       // ✅ Public Key
+        "PvhhmUajvzvo4kIVP"
       )
       .then(() => {
         setLoading(false);
@@ -29,46 +29,52 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 px-6">
-      <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-8">Contact Me</h2>
+    <section
+      id="contact"
+      className="py-24 px-6 bg-white dark:bg-[#0B1120] transition-colors duration-300"
+    >
+      <div className="max-w-3xl mx-auto">
+        <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-6">
+          Contact Me
+        </h2>
 
-        <p className="text-gray-300 mb-10 text-lg">
-          Want to work together or have any questions?
+        <p className="text-center text-gray-600 dark:text-gray-300 mb-10 text-lg">
+          Want to work together or have any questions? Feel free to send me a
+          message.
         </p>
 
         <form
           onSubmit={sendEmail}
-          className="bg-white/5 border border-white/10 rounded-3xl p-10 space-y-6"
+          className="bg-gray-100 dark:bg-[#111827] border border-gray-200 dark:border-gray-700 rounded-3xl p-8 md:p-10 shadow-lg transition-colors duration-300 space-y-6"
         >
           <input
             type="text"
             name="name"
             placeholder="Your Name"
-            className="w-full bg-[#111827] border border-white/10 rounded-xl px-5 py-4 outline-none focus:border-violet-500"
             required
+            className="w-full rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-[#1F2937] text-gray-900 dark:text-white px-5 py-4 outline-none focus:ring-2 focus:ring-violet-500 transition"
           />
 
           <input
             type="email"
             name="email"
             placeholder="Your Email"
-            className="w-full bg-[#111827] border border-white/10 rounded-xl px-5 py-4 outline-none focus:border-violet-500"
             required
+            className="w-full rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-[#1F2937] text-gray-900 dark:text-white px-5 py-4 outline-none focus:ring-2 focus:ring-violet-500 transition"
           />
 
           <textarea
             name="message"
-            rows="5"
+            rows={5}
             placeholder="Your Message"
-            className="w-full bg-[#111827] border border-white/10 rounded-xl px-5 py-4 outline-none focus:border-violet-500"
             required
-          ></textarea>
+            className="w-full rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-[#1F2937] text-gray-900 dark:text-white px-5 py-4 outline-none resize-none focus:ring-2 focus:ring-violet-500 transition"
+          />
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-4 rounded-xl bg-violet-600 hover:bg-violet-700 transition font-semibold"
+            className="w-full py-4 rounded-xl bg-violet-600 hover:bg-violet-700 text-white font-semibold transition duration-300 disabled:opacity-60"
           >
             {loading ? "Sending..." : "Send Message"}
           </button>

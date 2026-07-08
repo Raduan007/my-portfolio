@@ -1,10 +1,11 @@
 
+import Image from "next/image";
 import Link from "next/link";
 
 
 export default function Footer() {
   return (
-    <footer className="bg-[#020E22] opacity-60 ">
+    <footer className="bg-white dark:bg-[#0B1120] text-gray-900 dark:text-white transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Logo */}
@@ -73,22 +74,33 @@ export default function Footer() {
             <div className="flex gap-4">
             
               <a 
-              src={'/assets/github.png'}
+              
                 href="https://github.com/Raduan007"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-14 h-14 rounded-full border-2 border-gray-500 flex items-center justify-center hover:bg-blue-600 hover:text-white hover:border-blue-600 transition"
               >
+                    <Image
+      src="/assets/github.png"
+      alt="GitHub"
+      width={28}
+      height={28}></Image>
               
               </a>
 
               <a
-              src={'/assets/linkedin.png'}
+            
                 href="https://www.linkedin.com/in/raduanhossen857/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-14 h-14 rounded-full border-2 border-gray-500 flex items-center justify-center hover:bg-blue-600 hover:text-white hover:border-blue-600 transition"
               >
+                  <Image
+      src="/assets/linkedin.png"
+      alt="GitHub"
+      width={28}
+      height={28}
+    />
                 
               </a>
             </div>

@@ -13,7 +13,6 @@ const educationData = [
     place: "Kalikair College",
     year: "2022 - 2024",
   },
-  
 ];
 
 const experienceData = [
@@ -24,88 +23,105 @@ const experienceData = [
   },
 ];
 
-const Qualification = () => {
+export default function Qualification() {
   const [tab, setTab] = useState("education");
 
   const data = tab === "education" ? educationData : experienceData;
 
   return (
-    <section id="qualification" className="relative py-24 bg-[#030712] text-white min-h-screen">
-      {/* Optional: Add background stars styles or elements here if needed */}
-      
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold tracking-wide">Qualification</h2>
-        <p className="text-gray-400 text-sm mt-1">My personal journey</p>
+    <section
+      id="qualification"
+      className="relative min-h-screen py-24 px-6 bg-white dark:bg-[#0B1120] transition-colors duration-300"
+    >
+      {/* Heading */}
+      <div className="text-center mb-14">
+        <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
+          Qualification
+        </h2>
+
+        <p className="mt-2 text-gray-600 dark:text-gray-400">
+          My personal journey
+        </p>
       </div>
 
       {/* Tabs */}
-      <div className="flex justify-center gap-4 mb-16">
+      <div className="flex justify-center gap-5 mb-16">
         <button
           onClick={() => setTab("experience")}
-          className={`flex items-center gap-2 px-5 py-2 rounded-xl text-sm font-medium transition-all ${
+          className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
             tab === "experience"
-              ? "bg-white text-black"
-              : "text-gray-400 hover:text-white"
+              ? "bg-violet-600 text-white"
+              : "bg-gray-100 dark:bg-[#1F2937] text-gray-700 dark:text-gray-300 hover:bg-violet-100 dark:hover:bg-[#374151]"
           }`}
         >
-          <span>💼</span> Experience
+          💼 Experience
         </button>
 
         <button
           onClick={() => setTab("education")}
-          className={`flex items-center gap-2 px-5 py-2 rounded-xl text-sm font-medium transition-all ${
+          className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
             tab === "education"
-              ? "bg-white text-black"
-              : "text-gray-400 hover:text-white"
+              ? "bg-violet-600 text-white"
+              : "bg-gray-100 dark:bg-[#1F2937] text-gray-700 dark:text-gray-300 hover:bg-violet-100 dark:hover:bg-[#374151]"
           }`}
         >
-          <span>🎓</span> Education
+          🎓 Education
         </button>
       </div>
 
-      {/* Timeline Wrapper */}
-      <div className="relative max-w-4xl mx-auto px-4">
-        
-        {/* Central Vertical Line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-[2px] bg-white/20" />
+      {/* Timeline */}
+      <div className="relative max-w-5xl mx-auto">
+        {/* Center Line */}
+        <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] bg-gray-300 dark:bg-gray-700"></div>
 
-        {/* Timeline Grid */}
-        <div className="space-y-4 relative">
+        <div className="space-y-10">
           {data.map((item, index) => {
             const isLeft = index % 2 === 0;
 
             return (
-              <div 
-                key={index} 
-                className={`grid grid-cols-9 items-center w-full`}
+              <div
+                key={index}
+                className="grid grid-cols-9 items-center"
               >
-                {/* Left Side Content */}
+                {/* Left Card */}
                 <div className="col-span-4 flex justify-end">
                   {isLeft && (
-                    <div className="bg-[#111827]/60 border border-white/10 p-5 rounded-xl w-full max-w-sm backdrop-blur-sm shadow-xl">
-                      <h3 className="text-lg font-bold text-white">{item.title}</h3>
-                      <p className="text-gray-400 text-sm mt-1">{item.place}</p>
-                      <div className="flex items-center gap-2 text-gray-500 text-xs mt-3">
-                        <span>📅</span> {item.year}
-                      </div>
+                    <div className="w-full max-w-sm rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-[#111827] transition-colors duration-300">
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                        {item.title}
+                      </h3>
+
+                      <p className="mt-2 text-gray-600 dark:text-gray-400">
+                        {item.place}
+                      </p>
+
+                      <p className="mt-4 text-sm text-violet-600 dark:text-violet-400">
+                        📅 {item.year}
+                      </p>
                     </div>
                   )}
                 </div>
 
-                {/* Center Node Dot */}
-                <div className="col-span-1 flex justify-center relative">
-                  <div className="w-3 h-3 bg-white rounded-full z-10 border-4 border-[#030712] ring-1 ring-white/30" />
+                {/* Center Dot */}
+                <div className="col-span-1 flex justify-center">
+                  <div className="w-4 h-4 rounded-full bg-violet-600 border-4 border-white dark:border-[#0B1120]"></div>
                 </div>
 
-                {/* Right Side Content */}
+                {/* Right Card */}
                 <div className="col-span-4 flex justify-start">
                   {!isLeft && (
-                    <div className="bg-[#111827]/60 border border-white/10 p-5 rounded-xl w-full max-w-sm backdrop-blur-sm shadow-xl">
-                      <h3 className="text-lg font-bold text-white">{item.title}</h3>
-                      <p className="text-gray-400 text-sm mt-1">{item.place}</p>
-                      <div className="flex items-center gap-2 text-gray-500 text-xs mt-3">
-                        <span>📅</span> {item.year}
-                      </div>
+                    <div className="w-full max-w-sm rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-[#111827] transition-colors duration-300">
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                        {item.title}
+                      </h3>
+
+                      <p className="mt-2 text-gray-600 dark:text-gray-400">
+                        {item.place}
+                      </p>
+
+                      <p className="mt-4 text-sm text-violet-600 dark:text-violet-400">
+                        📅 {item.year}
+                      </p>
                     </div>
                   )}
                 </div>
@@ -113,10 +129,7 @@ const Qualification = () => {
             );
           })}
         </div>
-
       </div>
     </section>
   );
-};
-
-export default Qualification;
+}
