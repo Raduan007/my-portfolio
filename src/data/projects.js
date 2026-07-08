@@ -9,16 +9,16 @@ export const projects = [
 {
   title: "TradeHub",
   description:
-    "A full-stack second-hand marketplace where buyers and sellers can securely buy, sell, and manage used products."
+    "A full-stack second-hand marketplace where buyers and sellers can securely buy, sell, and manage used products.",
   github: "https://github.com/Raduan007/tradehub",
   live: "https://trade-hub-client-pi.vercel.app/",
 },
 {
   title: "StudyNook",
   description:
-    "A modern online study platform that helps students organize learning resources."
+    "A modern online study platform that helps students organize learning resources.",
   image: "/assets/studynook.png",
-  github: "https://github.com/Raduan007/studynook-client"
+  github: "https://github.com/Raduan007/studynook-client",
   live: "https://studynook-client-ten.vercel.app/",
 },
 ];
