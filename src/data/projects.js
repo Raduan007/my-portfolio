@@ -1,15 +1,16 @@
 export const projects = [
   {
-    title: "Qurbanihat",
-    description: "Modern personal portfolio website using Next.js and Tailwind CSS.",
-    image: "/assets/project1.png",
-    github: "https://github.com/Raduan007/B13-A8-QurbaniHat",
-    live: "https://b13-a8-qurbani-hat.vercel.app/",
+    title: "GameCoins",
+    description: "GameCoins is a full-stack game top-up platform that enables users to securely purchase gaming credits and digital products through a modern, user-friendly web application.",
+    image: "/assets/gamecoins.png",
+    github: "https://github.com/Raduan007/GameCoins-client", 
+    live: "https://game-coins-client-delta.vercel.app/",
   },
 {
   title: "TradeHub",
   description:
     "A full-stack second-hand marketplace where buyers and sellers can securely buy, sell, and manage used products.",
+  image: "/assets/tradehub.png",
   github: "https://github.com/Raduan007/tradehub",
   live: "https://trade-hub-client-pi.vercel.app/",
 },
