@@ -7,7 +7,6 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import TackStack from "@/components/TackStack";
 import Qualification from "@/components/Qualification";
 
 
@@ -38,7 +37,6 @@ export default function Home() {
         <Navbar />
       <Hero />
       <About />
-      <TackStack/>
       <Skills />
     <Qualification/>
       <Projects />

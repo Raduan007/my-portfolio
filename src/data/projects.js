@@ -60,7 +60,7 @@ export const projects = [
     solution:
       "Built modular backend architecture and reusable frontend components.",
     futurePlans: "Implement an AI-based price suggestion tool for sellers and an advanced product recommendation engine.",
-    githubClient: "https://github.com/Raduan007/tradehub",
+    githubClient: "https://github.com/Raduan007/TradeHub-client",
     githubServer: "https://github.com/Raduan007/tradehub-server",
     live: "https://trade-hub-client-pi.vercel.app/",
   },

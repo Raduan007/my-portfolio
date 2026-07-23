@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const About = () => {
   return (
     <section
-      className="min-h-screen flex items-center px-6 pt-28 pb-20 text-black dark:text-white"
+      className="py-16 md:py-20 flex items-center px-6 text-black dark:text-white"
     >
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
 
@@ -41,16 +41,12 @@ const About = () => {
             About <span className="text-violet-500">Me</span>
           </h2>
 
-          <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
-            I am <span className="text-violet-500 font-semibold">Raduan</span>, a passionate Frontend Developer focused on building modern and responsive websites. My programming journey began out of a deep curiosity for how things work on the internet, which quickly turned into a dedicated career path.
+          <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg leading-relaxed">
+            I am <span className="text-violet-500 font-semibold">Raduan</span>, a Frontend Developer. My coding journey started from a curiosity about the web and quickly became my career. I love crafting pixel-perfect, interactive UI experiences using React, Next.js, and Tailwind CSS.
           </p>
 
-          <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
-            I absolutely love crafting pixel-perfect, engaging user interfaces. There's nothing quite like the satisfaction of turning a complex design into a seamless, interactive experience for users. I specialize in Next.js, React, Tailwind CSS, Node.js, and MongoDB.
-          </p>
-
-          <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
-            When I'm not coding, you can usually find me exploring new technologies, playing sports to stay active, or getting creative with painting and digital art. I believe that maintaining a balance outside of programming fuels my creativity when solving technical problems!
+          <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg leading-relaxed">
+            Outside of programming, I enjoy exploring new tech, playing sports, and creating digital art. Staying active and creative keeps me inspired to solve complex technical problems!
           </p>
 
           {/* SKILLS */}

@@ -60,8 +60,8 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-2">
+        {/* Navigation */}
+        <div className="flex items-center gap-1 md:gap-2 overflow-x-auto scrollbar-hide">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = active === item.name;
@@ -71,18 +71,18 @@ export default function Navbar() {
                 key={item.name}
                 href={item.link}
                 onClick={() => setActive(item.name)}
-                className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                className={`flex items-center justify-center gap-2 p-2.5 md:px-4 md:py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   isActive
                     ? "bg-violet-100 dark:bg-white/10 text-violet-600 dark:text-violet-400"
                     : "text-gray-700 dark:text-gray-300 hover:bg-violet-100 dark:hover:bg-white/10 hover:text-violet-600 dark:hover:text-white"
                 }`}
+                title={item.name}
               >
-                <Icon size={16} />
-                {item.name}
+                <Icon size={18} className="shrink-0" />
+                <span className="hidden md:inline">{item.name}</span>
               </a>
             );
           })}
-
         </div>
 
         {/* Theme Toggle */}

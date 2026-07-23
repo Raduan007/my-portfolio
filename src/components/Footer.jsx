@@ -30,7 +30,7 @@ export default function Footer() {
                 </Link>
               </li>
 
-             
+
 
               <li>
                 <Link
@@ -41,7 +41,7 @@ export default function Footer() {
                 </Link>
               </li>
 
-           
+
 
               <li>
                 <Link href="/contact" className="hover:text-blue-600 transition">
@@ -56,13 +56,19 @@ export default function Footer() {
             <h3 className="text-2xl font-bold mb-6">Contact</h3>
 
             <div className="flex items-center gap-3 text-lg">
-              
+
 
               <a
                 href="mailto:raduanhossen007@gmail.com"
                 className="hover:text-blue-600 transition"
               >
                 raduanhossen007@gmail.com
+              </a>
+
+            </div>
+            <div>
+              <a>
+                +8801609247375
               </a>
             </div>
           </div>
@@ -72,36 +78,36 @@ export default function Footer() {
             <h3 className="text-2xl font-bold mb-6">Connect</h3>
 
             <div className="flex gap-4">
-            
-              <a 
-              
+
+              <a
+
                 href="https://github.com/Raduan007"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-14 h-14 rounded-full border-2 border-gray-500 flex items-center justify-center hover:bg-blue-600 hover:text-white hover:border-blue-600 transition"
               >
-                    <Image
-      src="/assets/github.png"
-      alt="GitHub"
-      width={28}
-      height={28}></Image>
-              
+                <Image
+                  src="/assets/github.png"
+                  alt="GitHub"
+                  width={28}
+                  height={28}></Image>
+
               </a>
 
               <a
-            
+
                 href="https://www.linkedin.com/in/raduanhossen857/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-14 h-14 rounded-full border-2 border-gray-500 flex items-center justify-center hover:bg-blue-600 hover:text-white hover:border-blue-600 transition"
               >
-                  <Image
-      src="/assets/linkedin.png"
-      alt="GitHub"
-      width={28}
-      height={28}
-    />
-                
+                <Image
+                  src="/assets/linkedin.png"
+                  alt="GitHub"
+                  width={28}
+                  height={28}
+                />
+
               </a>
             </div>
           </div>
