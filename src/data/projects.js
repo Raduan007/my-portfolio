@@ -28,6 +28,7 @@ export const projects = [
       "Managing authentication, role permissions, and deployment issues across Vercel and Render.",
     solution:
       "Implemented centralized authentication, JWT session management, protected routes, and optimized API handling.",
+    futurePlans: "Introduce a real-time chat feature between players and a reward points system for loyal customers.",
     githubClient: "https://github.com/Raduan007/GameCoins-client",
     githubServer: "https://github.com/Raduan007/GameCoins-server",
     live: "https://game-coins-client-delta.vercel.app/",
@@ -58,6 +59,7 @@ export const projects = [
       "Creating a scalable marketplace structure with proper user roles and product management.",
     solution:
       "Built modular backend architecture and reusable frontend components.",
+    futurePlans: "Implement an AI-based price suggestion tool for sellers and an advanced product recommendation engine.",
     githubClient: "https://github.com/Raduan007/tradehub",
     githubServer: "https://github.com/Raduan007/tradehub-server",
     live: "https://trade-hub-client-pi.vercel.app/",
@@ -86,6 +88,7 @@ export const projects = [
       "Designing a clean learning experience with intuitive navigation.",
     solution:
       "Focused on user-centered design and component reusability.",
+    futurePlans: "Add collaborative real-time study rooms and integration with popular calendar applications.",
     githubClient: "https://github.com/Raduan007/studynook-client",
     githubServer: "https://github.com/Raduan007/studynook-server",
     live: "https://studynook-client-ten.vercel.app/",

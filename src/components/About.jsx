@@ -42,12 +42,15 @@ const About = () => {
           </h2>
 
           <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
-            I am <span className="text-violet-500 font-semibold">Raduan</span>, a passionate Web Developer
-            focused on building modern and responsive websites.
+            I am <span className="text-violet-500 font-semibold">Raduan</span>, a passionate Frontend Developer focused on building modern and responsive websites. My programming journey began out of a deep curiosity for how things work on the internet, which quickly turned into a dedicated career path.
           </p>
 
           <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
-            I specialize in Next.js, React, Tailwind CSS, Node.js, and MongoDB.
+            I absolutely love crafting pixel-perfect, engaging user interfaces. There's nothing quite like the satisfaction of turning a complex design into a seamless, interactive experience for users. I specialize in Next.js, React, Tailwind CSS, Node.js, and MongoDB.
+          </p>
+
+          <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+            When I'm not coding, you can usually find me exploring new technologies, playing sports to stay active, or getting creative with painting and digital art. I believe that maintaining a balance outside of programming fuels my creativity when solving technical problems!
           </p>
 
           {/* SKILLS */}

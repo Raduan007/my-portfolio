@@ -2,6 +2,7 @@
 
 import emailjs from "emailjs-com";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
@@ -33,52 +34,67 @@ export default function Contact() {
       id="contact"
       className="py-24 px-6 bg-white dark:bg-[#0B1120] transition-colors duration-300"
     >
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-6">
-          Contact Me
-        </h2>
-
-        <p className="text-center text-gray-600 dark:text-gray-300 mb-10 text-lg">
-          Want to work together or have any questions? Feel free to send me a
-          message.
-        </p>
-
-        <form
-          onSubmit={sendEmail}
-          className="bg-gray-100 dark:bg-[#111827] border border-gray-200 dark:border-gray-700 rounded-3xl p-8 md:p-10 shadow-lg transition-colors duration-300 space-y-6"
+      <div className="max-w-2xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
         >
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            required
-            className="w-full rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-[#1F2937] text-gray-900 dark:text-white px-5 py-4 outline-none focus:ring-2 focus:ring-violet-500 transition"
-          />
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-fuchsia-500">Touch</span>
+          </h2>
+          <p className="text-gray-600 dark:text-gray-400 text-lg">
+            Have a project in mind or just want to say hi? Feel free to send me a message!
+          </p>
+        </motion.div>
 
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            required
-            className="w-full rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-[#1F2937] text-gray-900 dark:text-white px-5 py-4 outline-none focus:ring-2 focus:ring-violet-500 transition"
-          />
+        <motion.form
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          onSubmit={sendEmail}
+          className="bg-gray-50 dark:bg-[#111827] border border-gray-200 dark:border-gray-800 rounded-3xl p-8 md:p-10 shadow-xl shadow-black/5 dark:shadow-black/20 transition-colors duration-300 space-y-6 relative overflow-hidden"
+        >
+          {/* Decorative glow */}
+          <div className="absolute -top-24 -right-24 w-48 h-48 bg-violet-500/20 rounded-full blur-3xl pointer-events-none" />
+          
+          <div className="grid md:grid-cols-2 gap-6 relative z-10">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              required
+              className="w-full rounded-2xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#1F2937] text-gray-900 dark:text-white px-5 py-4 outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition-all"
+            />
 
-          <textarea
-            name="message"
-            rows={5}
-            placeholder="Your Message"
-            required
-            className="w-full rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-[#1F2937] text-gray-900 dark:text-white px-5 py-4 outline-none resize-none focus:ring-2 focus:ring-violet-500 transition"
-          />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+              className="w-full rounded-2xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#1F2937] text-gray-900 dark:text-white px-5 py-4 outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition-all"
+            />
+          </div>
+
+          <div className="relative z-10">
+            <textarea
+              name="message"
+              rows={5}
+              placeholder="Your Message"
+              required
+              className="w-full rounded-2xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#1F2937] text-gray-900 dark:text-white px-5 py-4 outline-none resize-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition-all"
+            />
+          </div>
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-4 rounded-xl bg-violet-600 hover:bg-violet-700 text-white font-semibold transition duration-300 disabled:opacity-60"
+            className="w-full py-4 rounded-2xl bg-gradient-to-r from-violet-600 to-fuchsia-500 hover:opacity-90 text-white font-bold tracking-wide transition duration-300 disabled:opacity-60 shadow-lg shadow-violet-500/30 relative z-10"
           >
             {loading ? "Sending..." : "Send Message"}
           </button>
-        </form>
+        </motion.form>
       </div>
     </section>
   );
