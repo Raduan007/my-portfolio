@@ -12,6 +12,7 @@ import {
   Sun,
 } from "lucide-react";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 const navItems = [
   { name: "Home", icon: Home, link: "#" },
@@ -49,8 +50,14 @@ export default function Navbar() {
       >
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <div className="w-11 h-11 rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-500 flex items-center justify-center text-white font-bold shadow-md">
-            RA
+          <div className="w-11 h-11 rounded-xl overflow-hidden shadow-md border border-gray-200 dark:border-gray-700">
+            <Image
+              src="/assets/hello.png"
+              alt="profile logo"
+              width={44}
+              height={44}
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
 

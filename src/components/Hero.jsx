@@ -19,18 +19,7 @@ const Hero = () => {
 
   return (
     <section
-      className="
-        min-h-screen
-        flex
-        items-center
-        justify-center
-        px-6
-        pt-24
-        text-black
-        dark:text-white
-        transition-all
-        duration-300
-      "
+      className="min-h-screen flex items-center justify-center px-6 pt-24 text-black dark:text-white transition-all duration-300"
     >
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-center">
 

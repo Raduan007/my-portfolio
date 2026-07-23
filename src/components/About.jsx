@@ -6,17 +6,7 @@ import { motion } from "framer-motion";
 const About = () => {
   return (
     <section
-      
-      className="
-        min-h-screen
-        flex
-        items-center
-        px-6
-        pt-28   /* ✅ IMPORTANT: adds space from top */
-        pb-20
-        text-black
-        dark:text-white
-      "
+      className="min-h-screen flex items-center px-6 pt-28 pb-20 text-black dark:text-white"
     >
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
 
