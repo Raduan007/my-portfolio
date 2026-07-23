@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="bg-white dark:bg-[#0B1120] text-gray-900 dark:text-white transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
           {/* Logo */}
           <div>
             <h2 className="text-4xl font-bold text-blue-600">Raduan</h2>
@@ -55,7 +55,7 @@ export default function Footer() {
           <div>
             <h3 className="text-2xl font-bold mb-6">Contact</h3>
 
-            <div className="flex items-center gap-3 text-lg">
+            <div className="flex flex-col items-center md:items-start gap-3 text-lg">
 
 
               <a
@@ -77,7 +77,7 @@ export default function Footer() {
           <div>
             <h3 className="text-2xl font-bold mb-6">Connect</h3>
 
-            <div className="flex gap-4">
+            <div className="flex gap-4 justify-center md:justify-start">
 
               <a
 
