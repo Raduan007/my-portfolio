@@ -146,7 +146,11 @@ const Hero = () => {
           <div className="relative">
 
             {/* IMAGE */}
-            <div className="p-2 rounded-full bg-gradient-to-br from-violet-600 to-fuchsia-500 shadow-2xl shadow-violet-500/30">
+            <motion.div 
+              animate={{ y: [-10, 10, -10] }}
+              transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+              className="p-2 rounded-full bg-gradient-to-br from-violet-600 to-fuchsia-500 shadow-2xl shadow-violet-500/30"
+            >
               <Image
                 src="/assets/hello.png"
                 alt="profile"
@@ -154,7 +158,7 @@ const Hero = () => {
                 height={380}
                 className="rounded-full object-cover w-[320px] h-[320px] md:w-[380px] md:h-[380px]"
               />
-            </div>
+            </motion.div>
 
             {/* CARD 1 */}
             <div className="absolute -left-35 top-30 w-44 p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md text-center">

@@ -7,7 +7,6 @@ import {
   GraduationCap,
   Folder,
   Mail,
-  MoreHorizontal,
   Moon,
   Sun,
 } from "lucide-react";
@@ -35,17 +34,17 @@ export default function Navbar() {
   if (!mounted) return null;
 
   return (
-    <div className="fixed top-5 left-0 w-full flex justify-center z-50">
+    <div className="fixed top-5 left-0 w-full flex justify-center z-50 px-4">
       <div
         className="
-          flex items-center justify-between
-          w-[92%] md:w-[80%] lg:w-[70%]
-          px-4 py-3
+          flex items-center justify-between gap-4 md:gap-8
+          w-full md:w-auto
+          px-3 py-2.5
           rounded-full
           backdrop-blur-xl
-          bg-white/80 dark:bg-[#0B1120]/70
-          border border-gray-300 dark:border-white/10
-          shadow-lg
+          bg-white/80 dark:bg-[#0B1120]/80
+          border border-gray-200 dark:border-gray-800
+          shadow-lg shadow-black/5 dark:shadow-black/20
         "
       >
         {/* Logo */}
@@ -84,12 +83,6 @@ export default function Navbar() {
             );
           })}
 
-          <button className="p-2 rounded-full hover:bg-violet-100 dark:hover:bg-white/10 transition">
-            <MoreHorizontal
-              size={18}
-              className="text-gray-700 dark:text-white"
-            />
-          </button>
         </div>
 
         {/* Theme Toggle */}
